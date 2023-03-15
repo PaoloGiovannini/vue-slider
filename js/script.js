@@ -46,7 +46,10 @@ const { createApp } = Vue
             this.activeImage = currentImageIndex;
         },
         autoplay(){
-            setInterval(this.nextButton, 3000);
+            return clock = setInterval(this.nextButton, 3000);
+        },
+        clear(){
+            clearInterval(clock);
         }
     },
     mounted(){
