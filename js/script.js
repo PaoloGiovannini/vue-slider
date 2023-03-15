@@ -44,7 +44,13 @@ const { createApp } = Vue
         },
         changeImage(currentImageIndex){
             this.activeImage = currentImageIndex;
+        },
+        autoplay(){
+            setInterval(this.nextButton, 3000);
         }
+    },
+    mounted(){
+        this.autoplay();
     }
   }).mount('#app')
 
