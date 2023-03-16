@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        clock: '',
         activeImage: 0,
         slides: [
                 {
@@ -46,10 +47,10 @@ const { createApp } = Vue
             this.activeImage = currentImageIndex;
         },
         autoplay(){
-            return clock = setInterval(this.nextButton, 3000);
+            this.clock = setInterval(this.nextButton, 3000);
         },
         clear(){
-            clearInterval(clock);
+            clearInterval(this.clock);
         }
     },
     mounted(){
